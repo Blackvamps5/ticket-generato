@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Ticket Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Phone Container -->
+<div class="phone" id="ticket">
+
+<!-- Status Bar -->
+<div class="status-bar">
+<div class="status-left" id="time">6:37</div>
+<div class="status-right">
+📶 📡
+<div class="battery"><div class="battery-level"></div></div>
+</div>
+</div>
+
+<!-- Header -->
+<div class="ticket-header">
+<span class="close-btn">✕</span>
+My Tickets
+</div>
+
+<!-- Ticket -->
+<div class="ticket">
+<div class="ticket-info">
+<div><div>Section</div><div id="section">126</div></div>
+<div><div>Row</div><div id="row">30</div></div>
+<div><div>Seat</div><div id="seat">5</div></div>
+</div>
+<div class="ticket-body">
+<img id="ticketImage" src="https://i.ibb.co/jwLWwWc/football.jpg" alt="ticket image">
+<h3 id="match">49ers vs. New York Giants</h3>
+<p id="date">Thu, Sep 21, 5:15pm • Levi's Stadium</p>
+</div>
+<div class="ticket-footer">
+<p id="level">100 Lower Level</p>
+</div>
+</div>
+
+<!-- Bottom Buttons -->
+<div class="bottom-buttons">
+<button>Transfer</button>
+<button>Sell</button>
+</div>
+
+</div>
+
+<!-- Controls -->
+<div class="controls">
+<input type="text" id="inputSection" placeholder="Section">
+<input type="text" id="inputRow" placeholder="Row">
+<input type="text" id="inputSeat" placeholder="Seat">
+<input type="text" id="inputMatch" placeholder="Match">
+<input type="text" id="inputDate" placeholder="Date & Time">
+<input type="text" id="inputLevel" placeholder="Level Info">
+<input type="file" id="inputImage" accept="image/*">
+<button class="btn" onclick="downloadTicket()">Download Ticket</button>
+</div>
+
+<!-- HTML2Canvas for download -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
